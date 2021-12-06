@@ -1,0 +1,143 @@
+.header {
+    padding: 32px 0;
+    background-color: @white;
+
+    &__wrap {
+        display: flex;      
+        align-items: center;  
+        position: relative;
+        padding: 0 7px;
+    }
+
+    .logo {
+        display: flex; 
+        align-items: center;
+    }
+
+    .vkdoc {
+        svg {
+            width: 86px;
+            height: 18px;
+            fill: #090909;
+        }
+    }
+
+    .vk {
+        position: relative;
+        margin-left: 14px;
+        padding-left: 16px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: #AAAEB3;
+            width: 2px;
+            height: 18px;
+            top: -2px;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        svg {
+            width: 82px;
+            height: 16px;
+            fill: #AAAEB3;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        &__item {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.2;            
+            letter-spacing: 0.5px;
+            margin-left: 47px;
+
+            &.btn {
+                background-color: @blue;
+                color: @white;
+                padding: 16px 15px;
+                border-radius: 16px;
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        &__wrap {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        .payday {
+            svg {
+                width: 80px;
+                height: 22px;
+            }
+        }
+
+        .vk {
+            svg {
+                width: 60px;
+                height: 12px;
+            }
+        }
+
+        .one-s {
+            margin-left: 20px;
+            max-width: 40px;
+        }
+
+        &__back {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        &__wrap {
+            align-items: flex-start;
+        }
+
+        .logo {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            max-height: 60px;
+        }
+
+        .payday {
+            margin-bottom: 5px;
+        }
+
+        .vk {
+            margin-left: 0;
+            padding-left: 0;
+
+            &:before {
+                width: 18px;
+                height: 2px;
+                bottom: auto;
+            }
+        }
+
+        .one-s {
+            margin-left: 20px;
+            max-width: 40px;
+        }
+
+        &__back {
+            margin-top: 5px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.transition {
+    background-color: #F5F6F6;
+    padding: 144px 0;
+
+    .block-title {
+        max-width: 440px;
+        margin-bottom: 72px;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+
+        &__item {
+            width: calc((100% / 3) - 32px);
+            margin: 0 16px;
+            background-color: @white;
+            border-radius: 16px;
+            padding: 50px 32px;
+
+            &.blue {
+                background-color: @blue;
+                position: relative;
+
+                .number {
+                    color: @white;
+
+                    &:before {
+                        color: @white;
+                    }
+                }
+
+                .name {
+                    color: @white;
+                }
+
+                .bg {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+
+                    .line {
+                        img {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+
+                    .star {
+                        position: absolute;
+
+                        &:nth-of-type(1) {
+                            top: 17px;
+                            right: 94px;
+                        }
+
+                        &:nth-of-type(2) {
+                            top: 33px;
+                            right: 56px;
+                        }
+
+                        &:nth-of-type(3) {
+                            top: 57px;
+                            right: 75px;
+                        }
+                    }
+                }
+            }
+
+            .number {
+                color: @blue;
+                font-size: 60px;
+                line-height: 1.2;
+                letter-spacing: -0.5px;
+                font-weight: 700;
+                position: relative;
+                z-index: 1;
+                padding-left: 7px;
+                margin-bottom: 28px;
+
+                &::before {
+                    content: attr(data-number);
+                    position: absolute;
+                    top: -6px;
+                    left: -2px;
+                    font-size: 60px;
+                    line-height: 1.2;
+                    letter-spacing: -0.5px;
+                    font-weight: 700;
+                    color: @blue;
+                    opacity: 0.1;
+                    z-index: -1;
+                }
+            }
+
+            .name {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.3;
+                letter-spacing: 0.18px;
+                margin: 0 0 16px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.6;
+                letter-spacing: 0.15px;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+/*=====================
+  Базовая типография
+=====================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@Montserrat: 'Montserrat', sans-serif;
+
+body {
+  font-family: @Montserrat;  
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 400;
+  color: @text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+& img {
+  max-width: 100%;
+}
+
+h1 {
+  
+}
+
+h2 {
+
+}
+
+p,
+li {
+  // font-size: 15px;
+  line-height: 1.2;
+  
+}
+
+p:last-child,
+li:last-child {
+  margin-bottom: 0;
+}
+
+.block-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0;
+
+  span {
+    color: @blue;
+  }
+
+  &.white {
+    color: @white;
+  }
+}

@@ -1,0 +1,144 @@
+.footer {
+    padding: 40px 0;  
+    background-color: #1C1C1E;
+
+    .logo {
+        display: flex; 
+        align-items: center;
+        padding-left: 7px;
+        margin-bottom: 53px;
+    }
+
+    .payday {
+        svg {
+            width: 119px;
+            height: 32px;
+            fill: @white;
+        }
+    }
+
+    .vk {
+        position: relative;
+        margin-left: 14px;
+        padding-left: 16px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: #AAAEB3;
+            width: 2px;
+            height: 18px;
+            top: -2px;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        svg {
+            width: 82px;
+            height: 16px;
+            fill: #AAAEB3;
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 68px;
+
+        &__item {
+            color: @white;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-decoration: underline;
+        }
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        a {
+            margin-left: 16px;
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+            
+        }
+    }
+    
+    .docs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+
+        p,
+        a {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        p {
+            color: #96969E;
+        }
+
+        a {
+            color: @white;
+            text-decoration: underline;
+        }
+    }
+
+    .rights {
+        color: #96969E;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .links {
+            margin-bottom: 30px;
+        }
+
+        .docs {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            p,
+            a {
+                font-size: 12px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .rights {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        .links {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .socials {
+            margin-left: 0;
+            margin-top: 10px;
+
+            a {
+                margin-right: 16px;
+                margin-left: 0;
+            }
+        }
+    }
+}

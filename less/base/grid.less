@@ -1,0 +1,46 @@
+body {
+  transition: 0.3s;
+  position: relative;
+  
+  &.no-scroll {
+    overflow: hidden;
+  }
+  &.opacity-layer {
+    position: relative;
+    transition: 0.3s;
+
+    &:after {
+      content: '';
+      //background-color: @green;
+      opacity: 0.3;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      transition: 0.3s;
+    }    
+  }
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1260px;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
