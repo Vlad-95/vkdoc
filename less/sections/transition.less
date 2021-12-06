@@ -22,6 +22,7 @@
             &.blue {
                 background-color: @blue;
                 position: relative;
+                overflow: hidden;
 
                 .number {
                     color: @white;
@@ -109,6 +110,63 @@
                 letter-spacing: 0.15px;
                 font-weight: 500;
                 margin: 0;
+                color: #76767B;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .transition {
+        .items {
+            &__item {
+                width: calc(50% - 32px);
+                margin: 0 16px 32px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .transition {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .transition {
+        .items {
+            margin: 0;
+            &__item {
+                width: 100%;
+                margin: 0 0 24px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .transition {
+        padding: 80px 0;
+
+        .block-title {
+            margin-bottom: 50px;
+        }
+
+        .items {
+            &__item {
+                p {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
             }
         }
     }

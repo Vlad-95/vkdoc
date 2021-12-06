@@ -5,6 +5,7 @@
 
     .block-title {
         max-width: 780px;
+        margin: 0 0 55px;
     }
 
     .img {
@@ -16,7 +17,6 @@
     .items {
         display: flex;
         flex-wrap: wrap;
-        margin: 55px 0 0;
 
         &__item {
             background-color: #38383D;
@@ -28,6 +28,41 @@
             font-weight: 500;
             line-height: 1.6;
             letter-spacing: 0.15px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .docs {
+        padding: 80px 0 64px;
+        overflow: hidden;
+
+        .block-title {
+            max-width: 270px;
+            margin: 0 0 32px;
+        }
+
+        .img {
+            max-width: 230px;
+            right: -63px;
+        }
+
+        .items {
+            margin: 0 -8px;
+            align-items: flex-start;
+        
+            &__item {
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                width: calc(50% - 16px);
+                margin: 0 8px 16px;
+                padding: 11px;
+                text-align: center;
+
+                &.full {
+                    width: calc(100% - 16px);
+                }
+            }    
         }
     }
 }
