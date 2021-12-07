@@ -1,41 +1,18 @@
 .footer {
-    padding: 127px 0 34px;  
+    padding: 104px 0 34px;  
     background-color: #1C1C1E;
 
     .logo {
         display: flex; 
         align-items: center;
-        margin-bottom: 69px;
+        margin-bottom: 77px;
     }
 
     .vkdoc {
         svg {
-            width: 85px;
-            height: 18px;
+            width: 143px;
+            height: 27px;
             fill: @white;
-        }
-    }
-
-    .vk {
-        position: relative;
-        margin-left: 14px;
-        padding-left: 16px;
-
-        &:before {
-            content: '';
-            position: absolute;
-            background-color: #AAAEB3;
-            width: 2px;
-            height: 18px;
-            top: -2px;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-        }
-        svg {
-            width: 82px;
-            height: 16px;
-            fill: #AAAEB3;
         }
     }
 
@@ -43,7 +20,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 26px;
+        margin-bottom: -29px;
         
         &__item {
             font-size: 14px;
@@ -54,7 +31,7 @@
             margin-bottom: 10px;
 
             &:not(:last-of-type) {
-                margin-right: 48px;
+                margin-right: 37px;
             }
         }
     }
@@ -62,7 +39,7 @@
     .links {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 61px;
+        margin-bottom: 76px;
 
         &__item {
             color: @white;
@@ -85,15 +62,19 @@
         display: flex;
         align-items: center;
         margin-left: auto;
+        justify-content: flex-end;
+        flex-wrap: wrap;
         
         .text {
-            display: none;
+            display: block;
+            width: 100%;
             color: @white;
             font-size: 14px;
             font-weight: 600;
             line-height: 1.14;
             margin: 0 0 24px;
             letter-spacing: 0.5px;
+            text-align: right;
         }
 
         a {
@@ -171,12 +152,13 @@
 
         .vkdoc {
             svg {
-                width: 110px;
-                height: 23px;
+                width: 127px;
+                height: 24px;
             }
         }
 
         .nav {
+            margin-bottom: 23px;
             &__item {
                 margin-bottom: 33px;
 
@@ -203,10 +185,10 @@
             flex-wrap: wrap;
             margin-left: 0;
             margin-top: 58px;
-            
-            .text {
-                display: block;
-                width: 100%;
+            justify-content: flex-start;
+
+            .text { 
+                text-align: left;
             }
 
             a {
