@@ -43,10 +43,10 @@
                 </div>
                 
                 <nav class="nav">
-                    <a href="javascript:;" class="nav__item">Что такое КЭДО</a>
-                    <a href="javascript:;" class="nav__item">Возможности</a>
-                    <a href="javascript:;" class="nav__item">Подключение</a>
-                    <a href="javascript:;" class="nav__item btn">Узнать подробнее</a>
+                    <a href="javascript:;" data-anchor="about" class="nav__item">Что такое КЭДО</a>
+                    <a href="javascript:;" data-anchor="opportunities" class="nav__item">Возможности</a>
+                    <a href="javascript:;" data-anchor="connection" class="nav__item">Подключение</a>
+                    <a href="javascript:;" data-anchor="feedback" class="nav__item btn">Узнать подробнее</a>
                 </nav>
                 
 
@@ -71,10 +71,10 @@
             </div>
 
             <nav class="nav">
-                <a href="javascript:;" class="nav__item">Что такое КЭДО</a>
-                <a href="javascript:;" class="nav__item">Возможности</a>
-                <a href="javascript:;" class="nav__item">Подключение</a>
-                <a href="javascript:;" class="nav__item btn">Узнать подробнее</a>
+                <a href="javascript:;" data-anchor="about" class="nav__item">Что такое КЭДО</a>
+                <a href="javascript:;" data-anchor="opportunities" class="nav__item">Возможности</a>
+                <a href="javascript:;" data-anchor="connection" class="nav__item">Подключение</a>
+                <a href="javascript:;" data-anchor="feedback" class="nav__item btn">Узнать подробнее</a>
             </nav>
 
             <div class="socials">
@@ -111,8 +111,10 @@
                 </a>
             </div>
 
-            <a href="javascript:;" class="phone">+7 (495) 023 40 90</a>
-            <a href="javascript:;" class="mail">support@payday</a>
+            <div class="links">
+                <a href="javascript:;" class="phone">+7 (495) 023 40 90</a>
+                <a href="javascript:;" class="mail">support@payday.ru</a>
+            </div>            
 
             <div class="rights">
                 <p>Не является публичной офертой</p>
@@ -142,13 +144,13 @@
             <div class="wrapper">
                 <h1 class="title">Документооборот <span>без бумаги</span></h1>
                 <h2 class="subtitle">Система кадрового электронного документооборота для вашей компании</h2>
-                <a href="javascript:;" class="btn">Узнать подробнее</a>
+                <a href="javascript:;" data-anchor="feedback" class="btn">Узнать подробнее</a>
 
                 <img src="img/intro-img.png" alt="" class="img">
             </div>
         </div>
 
-        <div class="about">
+        <div class="about" data-anchor="about">
             <div class="wrapper">
                 <div class="wysiwyg">
                     <p>
@@ -156,7 +158,7 @@
                     </p>
                 </div>
 
-                <a href="javascript:;" class="btn">Получить гайд по переходу на КЭДО</a>
+                <a href="javascript:;" data-anchor="feedback" class="btn">Получить гайд по переходу на КЭДО</a>
             </div>
         </div>
 
@@ -190,7 +192,7 @@
             <img src="img/advantages-img.png" alt="" class="img">
         </div>
 
-        <div class="connection">
+        <div class="connection" data-anchor="connection">
             <div class="wrapper">
                 <h2 class="block-title">
                     Личный <span>кабинет</span>
@@ -260,14 +262,15 @@
                     <div class="items__item">Приказы</div>
                     <div class="items__item">Заявления</div>
                     <div class="items__item">Согласия</div>
+                    <div class="items__item">Графики</div>
                     <div class="items__item full">Табели учета рабочего времени</div>
                     <div class="items__item full">Ученические договоры</div>
-                    <div class="items__item">Графики</div>
+                    
                 </div>
             </div>
         </div>
 
-        <div class="opportunities">            
+        <div class="opportunities" data-anchor="opportunities">            
             <div class="bg">
                 <img src="img/opportunities-bg.png" alt="">
             </div>
@@ -294,7 +297,7 @@
                             </p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="btn">Получить финансовую модель</a>
+                    <a href="javascript:;" data-anchor="feedback" class="btn">Получить финансовую модель</a>
                 </div>
                 
             </div>
@@ -366,7 +369,7 @@
             </div>
         </div>
 
-        <div class="feedback">
+        <div class="feedback" data-anchor="feedback">
             <div class="wrapper">
                 <h2 class="block-title">
                     Давайте знакомиться<span>?</span>
@@ -390,7 +393,7 @@
                         </div>
                         <div class="form__item">
                             <p class="name">Номер телефона<span class="required">*</span></p>
-                            <input type="text" class="input" placeholder="+7 000 000-00-00">
+                            <input type="text" name="tel" class="input" placeholder="+7 000 000-00-00">
                         </div>
                     </div>
 
@@ -411,7 +414,7 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="logo">
-                <a href="index.html" class="payday">
+                <a href="index.html" class="vkdoc">
                     <svg>
                         <use xlink:href="img/icons/sprite.svg#logo"></use>
                     </svg>
@@ -431,8 +434,10 @@
 
             <div class="links">
                 <a href="javascript:;" class="links__item">support@payday.ru</a>
+                <a href="javascript:;" class="links__item phone">+7 (495) 023 40 90</a>
 
                 <div class="socials">
+                    <p class="text">Присоединяйтесь к нам</p>
                     <a href="javascript:;">
                         <svg>
                             <use xlink:href="img/icons/sprite.svg#linkedin"></use>
@@ -480,6 +485,7 @@
     </footer>
     <script src="js/libs/jquery-3.2.1.min.js"></script> 
     <script src="js/libs/jquery.maskedinput.js"></script>
+    <script src="js/libs/jquery.matchHeight-min.js"></script>
     <script src="js/jquery-ready.js"></script>
     </body>
 </html>

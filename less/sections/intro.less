@@ -94,6 +94,19 @@
 
 @media screen and (max-width: 992px) {
     .intro {
+
+        .bg {
+            height: 199px;
+            overflow: hidden;
+
+            .line {
+                position: absolute;
+                right: -58px;
+                top: 0;
+                min-width: 916px;
+            }
+        }
+
         .title {
             font-size: 50px;
             max-width: 500px;
@@ -133,6 +146,32 @@
             height: 23%;
         }
 
+        .bg {
+            top: 280px;
+
+            .star {
+                
+                &:nth-of-type(1) {
+                    top: 82px;
+                    left: 6%;
+                    width: 9px;
+                }
+
+                &:nth-of-type(2) {
+                    top: 129px;
+                    right: 11%;
+                    width: 9px;
+                }
+
+                &:nth-of-type(3) {
+                    top: 91px;
+                    left: 8%;
+                    width: 15px;
+                    right: auto;
+                }
+            }
+        }
+
         .title {
             font-size: 32px;
             text-align: left;
@@ -159,6 +198,14 @@
             max-height: 390px;
             max-width: none;
             margin: 71px 0 0 -13px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .intro {
+        .title {
+            font-size: 29px;
         }
     }
 }

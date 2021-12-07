@@ -41,6 +41,7 @@
                     bottom: 0;
                     left: 0;
                     width: 100%;
+                    pointer-events: none;
 
                     .line {
                         img {
@@ -102,6 +103,8 @@
                 line-height: 1.3;
                 letter-spacing: 0.18px;
                 margin: 0 0 16px;
+                position: relative;
+                z-index: 2;
             }
 
             p {
@@ -163,6 +166,28 @@
 
         .items {
             &__item {
+                &.blue {
+                    .bg {
+                        .star {
+                            &:nth-of-type(1) {
+                                top: -21px;
+                                right: 77px;
+                                
+                            }
+
+                            &:nth-of-type(2) {
+                                top: 4px;
+                                right: 26px;
+                            }
+
+                            &:nth-of-type(3) {
+                                top: 26px;
+                                right: 45px;
+                            }
+                        }
+                    }
+                }
+
                 p {
                     font-size: 16px;
                     line-height: 1.5;

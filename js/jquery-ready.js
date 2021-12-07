@@ -1,72 +1,60 @@
 $(document).ready(function() {
-    //===========Мобильное меню
-    // let body = $('body')
-    // let windowWidth = window.innerWidth;
-    // let header = $('.header');
-    // let headerWrap = $('.header__wrap');
-    // let nav = header.find('.nav')
-    // let socials = $('.footer .socials');
-    // // let time = header.find('.nav__item.time');
-    // // let mail = header.find('.nav__item.mail');
-    // // let address = header.find('.nav__item.address');
-    // // let phone = header.find('.nav__item.phone')
-    // let burger = $('.burger');
-    // let windowHeight = $(window).height();
+    //мобильное меню
+    let body = $('body');
+    let burger = $('.burger');
 
-    // if (windowWidth <= 992) {
-    //     //создаем контейнер для менюшки
-    //     let mobileMenu = $(document.createElement('div'));
-    //     let nav = $(document.createElement('div'));
-    //     mobileMenu.addClass('mobile-menu');
-    //     nav.addClass('nav');
+    function showMenu() {
+        let mobileMenu = $('.mobile-menu');
 
-    //     headerWrap.append(mobileMenu)
-    //     mobileMenu.append(nav)
+        burger.toggleClass('active');
+        body.toggleClass('no-scroll');
+        mobileMenu.toggleClass('active');
+    }
 
-    //     //клонируем элементы хедера
-    //     let mobileTime = time.clone();
-    //     let mobileMail = mail.clone();
-    //     let mobileAddress = address.clone();
-    //     let mobilePhone = phone.clone();
-        
-    //     nav.append(mobilePhone); 
-    //     nav.append(mobileMail);  
-    //     nav.append(mobileAddress);  
-    //     nav.append(mobileTime);   
-              
-    // }
+    burger.click(showMenu);
 
-    // function showMenu() {
-    //     let mobileMenu = $('.mobile-menu');
+    //Якорные ссылки
+    function anchorLinks () {
+        let currentLink = $(this).attr('data-anchor');
+        let currentDiv = $('[data-anchor="'+ currentLink +'"]:not(a)');        
 
-    //     burger.toggleClass('active');
-    //     body.toggleClass('no-scroll');
-    //     mobileMenu.toggleClass('active');
-    //     console.log(1)
-    // }
+        //скролл до элемента
+        $('html, body').animate({scrollTop: currentDiv.offset().top}, 500);
 
-    // burger.click(showMenu);
+        if ($(window).width() <= 992) {
+            let mobileMenu = $('.mobile-menu');
 
-    //============Мобильное меню (КОНЕЦ) 
-    //ввод значений в поля
-    // $('input[data-valid="numbers"]').on('input', function () {
-    //     if (this.value.match(/[^0-9]/g)) {
-    //         this.value = this.value.replace(/[^0-9]/g, '');
-    //     }
-    // })
+            burger.removeClass('active');
+            body.removeClass('no-scroll');
+            mobileMenu.removeClass('active');
+        }
+    }
 
-    // $('input[data-valid="letter"]').on('input', function () {
-    //     if (this.value.match(/[^а-яА-Яa-zA-Z\s]/g)) {
-    //         this.value = this.value.replace(/[^а-яА-Яa-zA-Z\s]/g, '');
-    //     }
-    // });
+    $('a[data-anchor]').click(anchorLinks);
 
-    //маска
-    $('input[name="inn"]').mask("999999999999", {placeholder:""});
-    $('input[name="tel"]').mask("+7(999)999-99-99");
+    //одинаковая высота блоков
+    if ($('.transition').length) {
+        $('.transition .items__item').matchHeight({
+            byRow: false,
+        })
+    }
+
+    //переключение табов
+    if ($('.connection').length) {
+        let tabs = $('.connection .tabs');
+        let content = $('.connection .content');
+        tabs.on('click', 'div:not(.active)', function() {
+           console.log($(this).index())
+           $(this).addClass('active').siblings().removeClass('active');
+           content.find('.content__item').hide().eq($(this).index()).fadeIn();
+        })
+    }
 
     //Подмена текста на кнопке
     if ($(window).width() <= 576) {
         $('.about .btn').text('Получить гайд на КЭДО')
     }
+
+    //Маска телефона
+    $('input[name="tel"]').mask('+7 (999) 999-99-99')
 });
